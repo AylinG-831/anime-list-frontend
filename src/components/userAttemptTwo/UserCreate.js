@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserForm from './userCompontents/UserForm';
-import apiUrl from '../../../public/apiConfig';
+import apiUrl from '../../apiConfig';
 
 function UserCreate() {
     const navigate = useNavigate()

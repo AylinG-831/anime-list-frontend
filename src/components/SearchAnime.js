@@ -3,7 +3,7 @@ import searchCall from '../services/searchCall';
 import AnimeCardV3 from './AnimeCardV3';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import apiUrl from '../../public/apiConfig';
+import apiUrl from '../apiConfig';
 //THE SEARCH FEATURE IS BUGGED --- RandomAnime works as intended, as we re-render the anime card with each click
 //...and as long as we remember to switch the user BEFORE clicking. 
 
@@ -79,7 +79,7 @@ function SearchAnime() {
 
 }
     return (
-        <div className="search-main-div">
+        <div id="search-main-div">
                
         <div className="search-anime-main">
                   <div className='userSelect-form'>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-import apiUrl from '../../../public/apiConfig';
+import apiUrl from '../../apiConfig';
 
 function DisplayAllUsers() {
     const [users, setUsers] = useState([]);
@@ -24,7 +24,9 @@ function DisplayAllUsers() {
         return (
             <li key={index}>
                 <NavLink to={`/users/${user._id}`} >
+                    <div className="user-text">
                 {user.username}
+                </div>
                 </NavLink>
             </li>
         )

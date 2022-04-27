@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 import DisplayAllAnime from './DisplayAllAnime';
-import apiUrl from '../../../public/apiConfig';
+import apiUrl from '../../apiConfig';
 
 function IndividualUser() {
     const[user, setUser] = useState([]);

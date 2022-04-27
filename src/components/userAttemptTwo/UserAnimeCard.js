@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import apiUrl from '../../../public/apiConfig';
+import apiUrl from '../../apiConfig';
 
 function UserAnimeCard(props) {
     const navigate = useNavigate

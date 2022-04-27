@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import AnimeCard from './AnimeCard';
 import AnimeCardV3 from './AnimeCardV3';
 import { NavLink } from 'react-router-dom';
-import apiUrl from '../../public/apiConfig';
+import apiUrl from '../apiConfig';
 
 function Top50() {
     const [popAni, setPopAni] = useState([])
@@ -73,7 +73,6 @@ function Top50() {
 
     return(
         <div className="home-main-div">
-            <h3>Select a User, then press the button below.</h3>
 {/*             
             <h4>Take a look at some popular anime...</h4> */}
 
@@ -90,7 +89,7 @@ function Top50() {
         </div>
 
             <h3>The Top 50</h3>
-            <button onClick={showAnime}>Show Top 50 Anime</button>
+            <button type="button" className='btn btn-info' onClick={showAnime}>Show Top 50 Anime</button>
             <div className='row'>
             {goForIt === true ? popAni.map( (anime) => {
               return(  <AnimeCardV3 anime={anime} currentUser={currentUser}/>

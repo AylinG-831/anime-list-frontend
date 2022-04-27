@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import apiUrl from '../../public/apiConfig';
+import apiUrl from '../apiConfig';
 
 function AnimeCard(props) {
     const [list, setList] = useState()
@@ -44,7 +44,7 @@ function AnimeCard(props) {
             <img src={props.anime.images.jpg.image_url} />
             <blockquote>
             
-                <p>{props.anime.synopsis}</p>
+                {/* <p>{props.anime.synopsis}</p> */}
                 <footer>From MyAnimeList</footer>
             </blockquote>
             </div>

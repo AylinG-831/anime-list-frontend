@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import Button from 'react-bootstrap';
-import apiUrl from '../../public/apiConfig';
+import apiUrl from '../apiConfig';
 
 function AnimeCardV3(props) {
     const [list, setList] = useState()

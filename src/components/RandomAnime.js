@@ -6,7 +6,7 @@ import randomCall from "../services/randomCall";
 import ActiveUserSelect from "./userAttemptTwo/userCompontents/ActiveUserSelect";
 import axios from "axios";
 import { NavLink } from 'react-router-dom'
-import apiUrl from "../../public/apiConfig";
+import apiUrl from "../apiConfig";
 
 function RandomAnime() {
     //You know what? Let's do this the dirty way...
@@ -86,9 +86,9 @@ function RandomAnime() {
             
             </div>
 
-            <button onClick={handleOnClick}>Show a Random Anime</button>
+            <button type="button" className='btn btn-info' onClick={handleOnClick}>Show a Random Anime</button>
 
-            <div>
+            <div className="random-anime">
             {randomAni ? <AnimeCard anime={randomAni} currentUser={currentUser}/>  : `There is no random anime to display.`}
             </div>
         </div>

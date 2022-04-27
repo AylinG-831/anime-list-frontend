@@ -111,9 +111,10 @@ input {
   background-size: cover;
 }
 
-#search-div {
-  background-image: url("https://i.pinimg.com/originals/84/ad/7c/84ad7c13a8dc9e4966c41f2214b67d6f.png");
+#search-main-div {
+  background-image: linear-gradient(orange, white);
   background-repeat: repeat;
+  height: 100vh;
 }
 
 /* .search-anime-main {
@@ -121,6 +122,9 @@ input {
   height: max-content;
 } */
 
+header {
+  font-weight: bolder;
+}
 .random-anime-main {
   background-image: url("https://i.imgur.com/UsiiFjA.jpeg");
   
@@ -131,11 +135,15 @@ input {
   height: 100vh;
 }
 
+.top-anime-main {
+  background-image: linear-gradient(orange, white);
+  height: 100vh;
+}
 .about-div {
   /* background-image: url("https://i.imgur.com/mMvnMm6.jpeg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  color: black;
+  color: white;
   height: 100vh;
 }
 
@@ -147,12 +155,13 @@ input {
   height: 100vh;
 }
 
-.about-div {
+#about-div {
   background-image: url("https://i.imgur.com/pMx3wKS.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: black;
+  color: white;
   height: 100vh;
+  text-shadow: 4px 4px black;
 }
 
 .user-radio-div > input {
@@ -160,4 +169,37 @@ input {
   padding-right: 30px;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+name {
+  padding: 30px;
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.random-anime {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+  height: 50vh;
+}
+
+.user-text {
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+}
+
+#display-user-div {
+  color: white;
 }

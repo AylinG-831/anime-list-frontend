@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 
 const UserForm = ({user, handleSubmit, handleChange, cancelPath}) => {
     return (
+        <div>
+            <h1>User Create/Edit</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
             <label>Create/Edit a User</label>
             <input 
@@ -21,6 +23,8 @@ const UserForm = ({user, handleSubmit, handleChange, cancelPath}) => {
             </Link>
 
         </form>
+               
+        </div>
     )
 }
 

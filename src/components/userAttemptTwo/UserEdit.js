@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import UserForm from './userCompontents/UserForm';
-import apiUrl from '../../../public/apiConfig';
+import apiUrl from '../../apiConfig';
 
 function UserEdit() {
     const navigate = useNavigate();
