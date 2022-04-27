@@ -4,7 +4,7 @@ function About() {
     return (
         <div className="about-div">
             <h1>Jikan ga Nai</h1>
-            <p>Sorry about this POS website.</p>
+            {/* <p>Sorry about this POS website.</p>
             <p>Making a functioning website is above my skill level.</p>
             <p>As things stand, refresh the page after you pick an anime, by clicking "Add to List" three times. Every time. No exceptions.</p>
             <ul>
@@ -18,7 +18,7 @@ function About() {
                 <li>Now, refresh the page.</li>
                 <li>Then start over.</li>
                 <li>Annoying, isn't it?</li>
-            </ul>
+            </ul> */}
         </div>
     )
 }
