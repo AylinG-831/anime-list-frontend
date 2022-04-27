@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import apiUrl from '../../../public/apiConfig';
 
 function DisplayAllUsers() {
     const [users, setUsers] = useState([]);
 
     const fetchData = async () => {
         try {
-            const response = await axios(`http://localhost:3001/api/users`)
+            const response = await axios(`${apiUrl}`)
             console.log("our api call response for users: ", response)
             setUsers(response.data.users);
         } catch (error) {

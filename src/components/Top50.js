@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import AnimeCard from './AnimeCard';
 import AnimeCardV3 from './AnimeCardV3';
 import { NavLink } from 'react-router-dom';
+import apiUrl from '../../public/apiConfig';
 
 function Top50() {
     const [popAni, setPopAni] = useState([])
@@ -18,7 +19,7 @@ function Top50() {
 
         const fetchData = async () => {
             try {
-                const response = await axios(`http://localhost:3001/api/users`)
+                const response = await axios(`${apiUrl}`)
                 console.log("our api call response for users: ", response)
                 setAllUsers(response.data.users);
             } catch (error) {

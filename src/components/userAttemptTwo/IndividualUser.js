@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 import DisplayAllAnime from './DisplayAllAnime';
-
+import apiUrl from '../../../public/apiConfig';
 
 function IndividualUser() {
     const[user, setUser] = useState([]);
@@ -15,7 +15,7 @@ function IndividualUser() {
     useEffect( () => {
         const fetchData = async () => {
             try {
-                const response = await axios(`http://localhost:3001/api/users/${id}`)
+                const response = await axios(`${apiUrl}/${id}`)
                 console.log("This is our users response: ", response)
                 setUser(response.data);
                 setList(response.data.listArray);
@@ -39,7 +39,7 @@ function IndividualUser() {
 
     const destroy = () => {
         axios({
-            url: `http://localhost:3001/api/users/${id}`,
+            url: `${apiUrl}/${id}`,
             method: "DELETE",
         })
         .then( () => setDeleted(true))

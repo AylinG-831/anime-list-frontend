@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import Button from 'react-bootstrap';
+import apiUrl from '../../public/apiConfig';
 
 function AnimeCardV3(props) {
     const [list, setList] = useState()
@@ -31,7 +32,7 @@ function AnimeCardV3(props) {
         // event.preventDefault()
         axios({
             // url: `${apiUrl}/users`
-            url: `http://localhost:3001/api/users/${userID}`,
+            url: `${apiUrl}/${userID}`,
             method: 'PUT',
             data: updatedUser
         }).catch(console.error)

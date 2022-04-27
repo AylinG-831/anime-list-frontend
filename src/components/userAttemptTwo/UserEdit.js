@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import UserForm from './userCompontents/UserForm';
+import apiUrl from '../../../public/apiConfig';
 
 function UserEdit() {
     const navigate = useNavigate();
@@ -28,7 +29,7 @@ function UserEdit() {
         event.preventDefault()
         axios({
             // url: `${apiUrl}/users`
-            url: `http://localhost:3001/api/users/${id}`,
+            url: `${apiUrl}/${id}`,
             method: 'PUT',
             data: user
         }).then(res => setCreatedUser(res.data.user)).catch(console.error)

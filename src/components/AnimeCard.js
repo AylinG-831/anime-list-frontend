@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import apiUrl from '../../public/apiConfig';
 
 function AnimeCard(props) {
     const [list, setList] = useState()
@@ -14,7 +15,7 @@ function AnimeCard(props) {
         // event.preventDefault()
         axios({
             // url: `${apiUrl}/users`
-            url: `http://localhost:3001/api/users/${userID}`,
+            url: `${apiUrl}/${userID}`,
             method: 'PUT',
             data: updatedUser
         }).catch(console.error)

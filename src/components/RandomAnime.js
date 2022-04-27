@@ -6,6 +6,7 @@ import randomCall from "../services/randomCall";
 import ActiveUserSelect from "./userAttemptTwo/userCompontents/ActiveUserSelect";
 import axios from "axios";
 import { NavLink } from 'react-router-dom'
+import apiUrl from "../../public/apiConfig";
 
 function RandomAnime() {
     //You know what? Let's do this the dirty way...
@@ -19,7 +20,7 @@ function RandomAnime() {
     
         const fetchData = async () => {
             try {
-                const response = await axios(`http://localhost:3001/api/users`)
+                const response = await axios(`${apiUrl}`)
                 console.log("our api call response for users: ", response)
                 setAllUsers(response.data.users);
             } catch (error) {

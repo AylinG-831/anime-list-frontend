@@ -4,8 +4,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-
-
+import apiUrl from '../../../public/apiConfig';
 
 function UserAnimeCard(props) {
     const navigate = useNavigate
@@ -28,7 +27,7 @@ function UserAnimeCard(props) {
     useEffect( () => {
         const fetchData = async () => {
             try {
-                const response = await axios(`http://localhost:3001/api/users/${id}`)
+                const response = await axios(`${apiUrl}/${id}`)
                 console.log("Our user: ", response);
                 setUser(response.data);
                 console.log('This is our props anime: ', props.anime)
@@ -71,7 +70,7 @@ function UserAnimeCard(props) {
         //The page should refresh after this, actually. 
         removeFromList();
         axios({
-            url: `http://localhost:3001/api/users/${id}`,
+            url: `${apiUrl}/${id}`,
             method: "PUT",
             data: user
         })

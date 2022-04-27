@@ -3,7 +3,7 @@ import searchCall from '../services/searchCall';
 import AnimeCardV3 from './AnimeCardV3';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-
+import apiUrl from '../../public/apiConfig';
 //THE SEARCH FEATURE IS BUGGED --- RandomAnime works as intended, as we re-render the anime card with each click
 //...and as long as we remember to switch the user BEFORE clicking. 
 
@@ -19,7 +19,7 @@ function SearchAnime() {
   
     const fetchData = async () => {
         try {
-            const response = await axios(`http://localhost:3001/api/users`)
+            const response = await axios(`${apiUrl}`)
             console.log("our api call response for users: ", response)
             setAllUsers(response.data.users);
         } catch (error) {
